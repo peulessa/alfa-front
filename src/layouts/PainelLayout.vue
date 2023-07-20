@@ -20,6 +20,7 @@
       bordered
       class=""
     >
+      <EssentialLinks />
     </q-drawer>
 
     <q-page-container>
@@ -40,6 +41,7 @@
 </template>
 
 <script setup>
+import EssentialLinks from "src/components/EssentialLinks.vue";
 import { ref } from "vue";
 
 const leftDrawerOpen = ref(false);
