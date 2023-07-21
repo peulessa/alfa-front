@@ -23,7 +23,7 @@ const router = useRouter();
 
 const links = ref([
   { id: 1, label: "Alunos", icon: "person", route: "/painel" },
-  { id: 2, label: "Módulos", icon: "description", route: "/" },
+  { id: 2, label: "Módulos", icon: "description", route: "/modulos" },
 ]);
 
 const redirectToRoute = (route) => {
