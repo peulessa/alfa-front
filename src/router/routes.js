@@ -22,6 +22,12 @@ const routes = [
   },
 
   {
+    path: "/modulos",
+    component: () => import("layouts/PainelLayout.vue"),
+    children: [{ path: "", component: () => import("pages/ModulosPage.vue") }],
+  },
+
+  {
     path: "/:catchAll(.*)*",
     component: () => import("pages/ErrorNotFound.vue"),
   },

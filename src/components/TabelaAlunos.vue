@@ -25,6 +25,9 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const columns = ref([
   {
@@ -74,6 +77,7 @@ const tableData = ref([
 
 function editRow() {
   console.log("editou");
+  router.push("/modulos");
 }
 
 function confirmDelete() {

@@ -22,8 +22,8 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const links = ref([
-  { id: 1, label: "Alunos", icon: "star_border", route: "/painel" },
-  { id: 2, label: "Módulos", icon: "star_border", route: "/" },
+  { id: 1, label: "Alunos", icon: "person", route: "/painel" },
+  { id: 2, label: "Módulos", icon: "description", route: "/" },
 ]);
 
 const redirectToRoute = (route) => {
