@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import TabelaAlunos from "components/TabelaAlunos.vue";
+import TabelaAlunos from "components/Tabela.vue";
 </script>
