@@ -1,6 +1,9 @@
 <template>
   <q-page padding>
     <Tabela :tableData="tableData" :columns="columns" route="/modulos" />
+    <div class="flex justify-center">
+      <q-btn to="/gerenciar-alunos">Adicionar Aluno</q-btn>
+    </div>
   </q-page>
 </template>
 

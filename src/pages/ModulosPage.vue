@@ -1,6 +1,10 @@
 <template>
   <q-page padding>
-    <Tabela :tableData="tableData" :columns="columns" route="/gerenciar" />
+    <Tabela
+      :tableData="tableData"
+      :columns="columns"
+      route="/gerenciarmodulos"
+    />
   </q-page>
 </template>
 
@@ -20,10 +24,10 @@ const columns = ref([
     field: "modulo",
   },
   {
-    name: "media",
+    name: "nota",
     align: "center",
-    label: "Média",
-    field: "media",
+    label: "Nota",
+    field: "nota",
     sortable: true,
   },
   {
@@ -41,12 +45,12 @@ const columns = ref([
 ]);
 
 const tableData = ref([
-  { modulo: "Lógica de Programação", media: 6 },
-  { modulo: "JavaScript", media: 6 },
-  { modulo: "HTML", media: 6 },
-  { modulo: "CSS", media: 6 },
-  { modulo: "Componentização com Vue", media: 6 },
-  { modulo: "Boas Práticas", media: 6 },
+  { modulo: "Lógica de Programação", nota: 6 },
+  { modulo: "JavaScript", nota: 6 },
+  { modulo: "HTML", nota: 6 },
+  { modulo: "CSS", nota: 6 },
+  { modulo: "Componentização com Vue", nota: 6 },
+  { modulo: "Boas Práticas", nota: 6 },
 ]);
 
 const rotas = ref([]);
