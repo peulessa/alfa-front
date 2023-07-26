@@ -49,7 +49,7 @@ const loading = ref(false);
 function login() {
   if (email.value === "user@example.com" && password.value === "123") {
     const authToken = "seu_token_gerado";
-    localStorage.setItem("authToken", authToken);
+    sessionStorage.setItem("authToken", authToken);
     router.push("/painel");
   } else {
     console.log("credenciasi inválidas");

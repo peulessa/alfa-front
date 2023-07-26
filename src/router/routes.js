@@ -9,10 +9,17 @@ const routes = [
     path: "/painel",
     component: () => import("layouts/PainelLayout.vue"),
     meta: { requiresAuth: true },
-    children: [{ path: "", component: () => import("pages/PainelPage.vue") }],
+    children: [
+      { path: "", component: () => import("pages/PainelPage.vue") },
+      { path: "/modulos", component: () => import("pages/ModulosPage.vue") },
+      {
+        path: "/gerenciar",
+        component: () => import("pages/GerenciarModulosPage.vue"),
+      },
+    ],
 
     beforeEnter: (to, from, next) => {
-      const authToken = localStorage.getItem("authToken");
+      const authToken = sessionStorage.getItem("authToken");
       if (authToken) {
         next();
       } else {
@@ -20,13 +27,6 @@ const routes = [
       }
     },
   },
-
-  {
-    path: "/modulos",
-    component: () => import("layouts/PainelLayout.vue"),
-    children: [{ path: "", component: () => import("pages/ModulosPage.vue") }],
-  },
-
   {
     path: "/:catchAll(.*)*",
     component: () => import("pages/ErrorNotFound.vue"),

@@ -5,7 +5,7 @@
         <q-td :props="props">
           <q-icon
             name="edit"
-            v-on:click="editRow(props.row)"
+            v-on:click="editRow(tableData.name)"
             style="cursor: pointer"
           />
         </q-td>
@@ -14,7 +14,7 @@
         <q-td :props="props">
           <q-icon
             name="delete"
-            v-on:click="confirmDelete(props.row)"
+            v-on:click="confirmDelete(props.columns)"
             style="cursor: pointer; color: red"
           />
         </q-td>
@@ -29,58 +29,26 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const columns = ref([
-  {
-    name: "name",
-    required: true,
-    label: "Aluno",
-    align: "left",
-    field: "name",
+const props = defineProps({
+  tableData: {
+    typeof: [],
   },
-  {
-    name: "age",
-    align: "center",
-    label: "Média Geral",
-    field: "age",
-    sortable: true,
+  columns: {
+    typeof: [],
   },
-  {
-    name: "city",
-    align: "center",
-    label: "CPF",
-    field: "city",
-    sortable: true,
+  route: {
+    typeof: [],
   },
-  {
-    name: "actions",
-    label: "Módulos",
-    field: "actions",
-    align: "center",
-  },
-  {
-    name: "delete",
-    label: "Deletar Aluno",
-    field: "delete",
-    align: "center",
-  },
-]);
-
-const tableData = ref([
-  { name: "John Doe", age: 30, city: "New York" },
-  { name: "Jane Smith", age: 25, city: "Los Angeles" },
-  { name: "Bob Johnson", age: 35, city: "Chicago" },
-  { name: "Bob Johnson", age: 35, city: "Chicago" },
-  { name: "Bob Johnson", age: 35, city: "Chicago" },
-  { name: "Bob Johnson", age: 35, city: "Chicago" },
-  { name: "Bob Johnson", age: 35, city: "Chicago" },
-]);
+});
 
 function editRow() {
-  console.log("editou");
-  router.push("/modulos");
+  router.push(props.route);
 }
 
-function confirmDelete() {
-  console.log("deletou");
+function confirmDelete(row) {
+  const index = this.tableData.indexOf(row);
+  if (index !== -1) {
+    this.tableData.splice(index, 1);
+  }
 }
 </script>
