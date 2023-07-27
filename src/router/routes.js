@@ -17,8 +17,12 @@ const routes = [
         component: () => import("pages/GerenciarModulosPage.vue"),
       },
       {
-        path: "/gerenciar-alunos",
-        component: () => import("pages/GerenciarAlunosPage.vue"),
+        path: "/adicionar-aluno",
+        component: () => import("pages/AdicionarAlunoPage.vue"),
+      },
+      {
+        path: "/adicionar-modulo",
+        component: () => import("pages/AdicionarModuloPage.vue"),
       },
     ],
 

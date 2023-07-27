@@ -5,6 +5,9 @@
       :columns="columns"
       route="/gerenciarmodulos"
     />
+    <div class="flex justify-center">
+      <q-btn to="/adicionar-modulo">Adicionar Módulo</q-btn>
+    </div>
   </q-page>
 </template>
 
