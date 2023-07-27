@@ -4,7 +4,7 @@
       <template v-slot:body-cell-actions="props">
         <q-td :props="props">
           <q-icon
-            name="visibility"
+            :name="iconName"
             v-on:click="editRow(props.name)"
             style="cursor: pointer"
           />
@@ -38,6 +38,9 @@ const props = defineProps({
   },
   route: {
     typeof: [],
+  },
+  iconName: {
+    typeof: String,
   },
 });
 

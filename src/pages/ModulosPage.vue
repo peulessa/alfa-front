@@ -3,6 +3,7 @@
     <Tabela
       :tableData="tableData"
       :columns="columns"
+      iconName="edit"
       route="/gerenciar-modulos"
     />
     <div class="flex justify-center">

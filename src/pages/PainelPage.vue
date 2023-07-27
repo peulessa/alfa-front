@@ -1,6 +1,11 @@
 <template>
   <q-page padding>
-    <Tabela :tableData="tableData" :columns="columns" route="/modulos" />
+    <Tabela
+      :tableData="tableData"
+      :columns="columns"
+      route="/modulos"
+      iconName="visibility"
+    />
     <div class="flex justify-center">
       <q-btn to="/adicionar-aluno">Adicionar Aluno</q-btn>
     </div>
