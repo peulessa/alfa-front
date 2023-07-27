@@ -13,7 +13,7 @@ const routes = [
       { path: "", component: () => import("pages/PainelPage.vue") },
       { path: "/modulos", component: () => import("pages/ModulosPage.vue") },
       {
-        path: "/gerenciarmodulos",
+        path: "/gerenciar-modulos",
         component: () => import("pages/GerenciarModulosPage.vue"),
       },
       {

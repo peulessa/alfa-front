@@ -3,7 +3,7 @@
     <Tabela
       :tableData="tableData"
       :columns="columns"
-      route="/gerenciarmodulos"
+      route="/gerenciar-modulos"
     />
     <div class="flex justify-center">
       <q-btn to="/adicionar-modulo">Adicionar Módulo</q-btn>

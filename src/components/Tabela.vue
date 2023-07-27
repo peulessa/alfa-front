@@ -4,8 +4,8 @@
       <template v-slot:body-cell-actions="props">
         <q-td :props="props">
           <q-icon
-            name="edit"
-            v-on:click="editRow(tableData.name)"
+            name="visibility"
+            v-on:click="editRow(props.name)"
             style="cursor: pointer"
           />
         </q-td>
