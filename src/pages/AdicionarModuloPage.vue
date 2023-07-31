@@ -1,3 +1,7 @@
-<template>OLA MUNDO</template>
+<template>
+  <FormularioDeAdicao />
+</template>
 
-<script setup></script>
+<script setup>
+import FormularioDeAdicao from "components/FormModulos.vue";
+</script>
